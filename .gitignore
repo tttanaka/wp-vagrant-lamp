@@ -10,4 +10,5 @@ vendor/
 # wp configs
 config/
 
-web/
+web/*
+!web/.gitkeep
