@@ -12,3 +12,11 @@ config/
 
 web/*
 !web/.gitkeep
+!web/index.php
+!web/wp-config.php
+
+web/app/mu-plugis
+web/app/plugins
+web/app/themes/
+web/app/uploads
+!web/app*
