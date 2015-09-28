@@ -1,0 +1,13 @@
+# ignore node/grunt dependency directories
+node_modules/
+
+# ignore all local environment setup (.vagrant)
+.vagrant
+
+# composer vendors
+vendor/
+
+# wp configs
+config/
+
+web/

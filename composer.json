@@ -1,0 +1,32 @@
+{
+    "name": "future-ink/project",
+    "description": "A WP stack heavily based off roots/bedrock",
+    "type": "project",
+    "repositories": [
+      {
+        "type": "composer",
+        "url": "http://wpackagist.org"
+      }
+    ],
+    "require": {
+        "php": ">=5.5",
+        "composer/installers": "~1.0.12",
+        "vlucas/phpdotenv": "^2.0.1",
+        "johnpbloch/wordpress": "4.3.1",
+        "roots/soil": "3.4.0"
+    },
+    "extra": {
+      "installer-paths": {
+        "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+        "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
+        "web/app/themes/{$name}/": ["type:wordpress-theme"]
+      },
+      "wordpress-install-dir": "web/wp"
+    },
+    "authors": [
+        {
+            "name": "Tyler",
+            "email": "tyler@future-ink.com"
+        }
+    ]
+}
