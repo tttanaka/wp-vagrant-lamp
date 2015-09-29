@@ -5,14 +5,23 @@ node_modules/
 .vagrant
 
 # composer vendors
-vendor/
+vendor/*
+!vendor/.gitkeep
 
 # wp configs
-config/
+config/*
+!config/.gitkeep
 
 web/*
 !web/.gitkeep
 !web/index.php
 !web/wp-config.php
 
-!web/app*
+web/app/mu-plugis/*
+web/app/plugins/*
+web/app/themes/*
+web/app/uploads/*
+!web/app/mu-plugis/.gitkeep
+!web/app/plugins/.gitkeep
+!web/app/themes/.gitkeep
+!web/app/uploads/.gitkeep
