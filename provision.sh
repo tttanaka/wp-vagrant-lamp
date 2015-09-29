@@ -134,5 +134,12 @@ curl -s https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.pha
 chmod +x wp-cli.phar
 sudo mv wp-cli.phar /usr/local/bin/wp
 
+mysqldump --user=root -proot scotchbox > /var/www/$PROJECTFOLDER/db/mysqldump_$(date +%Y-%m-%d-%H.%M.%S).sql
+# OPTIONAL: uncomment to dump mysql every 10 minutes
+echo "*/2 * * * * mysqldump --user=root -proot scotchbox > /var/www/$PROJECTFOLDER/db/mysqldump_$(date +%Y-%m-%d-%H.%M.%S).sql" | crontab
+
+# backup: # mysqldump -u root -p[root_password] [database_name] > dumpfilename.sql
+# restore:# mysql -u root -p[root_password] [database_name] < dumpfilename.sql
+
 echo "Project setup complete..."
 echo "Type 'vagrant ssh && cd /var' to log into the machine."
