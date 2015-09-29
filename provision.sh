@@ -70,7 +70,7 @@ source /etc/profile.d/rvm.sh
 # sudo apt-get install -y ruby2.2.3-dev
 rvm install 1.9.3-dev
 rvm install 2.2.3-dev
-rvm use 2.2.3
+rvm use 2.2.3-dev
 
 # echo "-----------------------"
 # echo "--- Installing Gems ---"
@@ -99,7 +99,7 @@ echo -e "\n---Installing Composer---\n"
 curl -s https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
 
-echo -e "---Installing WP-ClI---"
+echo -e "\n---Installing WP-ClI---\n"
 curl -s https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar > wp-cli.phar
 chmod +x wp-cli.phar
 sudo mv wp-cli.phar /usr/local/bin/wp
@@ -110,5 +110,5 @@ sudo mv wp-cli.phar /usr/local/bin/wp
 # backup: # mysqldump -u root -p[root_password] [database_name] > dumpfilename.sql
 # restore:# mysql -u root -p[root_password] [database_name] < dumpfilename.sql
 
-echo "---Provisioning Complete---"
+echo "\n---Provisioning Complete---\n"
 echo "Type 'vagrant ssh && cd /var' to log into the machine."
