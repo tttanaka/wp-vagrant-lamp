@@ -1,8 +1,9 @@
-# ignore node/grunt dependency directories
+# NPM
 node_modules/
 
 # ignore all local environment setup (.vagrant)
 .vagrant
+bin
 
 # composer vendors
 vendor/*
@@ -25,3 +26,7 @@ web/app/uploads/*
 !web/app/plugins/.gitkeep
 !web/app/themes/.gitkeep
 !web/app/uploads/.gitkeep
+
+# database dump folder
+db/*
+!db/.gitkeep
